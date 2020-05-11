@@ -5,9 +5,9 @@
 
 ## version
 
-openjdk 13 2019-09-17
-OpenJDK Runtime Environment (build 13+33)
-OpenJDK 64-Bit Server VM (build 13+33, mixed mode, sharing)
+- openjdk 13 2019-09-17
+- OpenJDK Runtime Environment (build 13+33)
+- OpenJDK 64-Bit Server VM (build 13+33, mixed mode, sharing)
 
 ## 実行
 
