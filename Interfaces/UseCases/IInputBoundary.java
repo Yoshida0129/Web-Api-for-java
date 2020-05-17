@@ -1,5 +1,5 @@
 package Interfaces.UseCases;
 
-public interface InputBoundary {
+public interface IInputBoundary {
   void handle(String userName);
 }

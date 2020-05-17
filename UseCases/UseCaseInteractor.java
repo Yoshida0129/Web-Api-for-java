@@ -1,13 +1,17 @@
 package UseCases;
 
-import Interfaces.UseCases.InputBoundary;
+import Interfaces.UseCases.IInputBoundary;
+import Interfaces.UseCases.IUserRepository;
+import Entities.User;
 
-public class UseCaseInteractor implements InputBoundary {
+public class UseCaseInteractor implements IInputBoundary {
 
   public void handle(String userName){
-    int id = new java.util.Random().nextInt(20);
-    Entities.User user = new Entities.User(id, userName);
-    System.out.println(user.getUserId());
-    System.out.println(user.getUserName());
+    User user = new User(IUserRepository.getMaxId(), userName);
+
+    IUserRepository.saveUser(user);
+
+    UserOutputData outputData = new UserOutputData(user);
+    outputData.handle();
   };
 }
